@@ -1,0 +1,33 @@
+@use "../utilities" as u;
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--clr-900);
+  color: var(--clr-200);
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+}
+
+img {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

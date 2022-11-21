@@ -1,0 +1,11 @@
+@use "../Utilities/" as u;
+
+.hero {
+  text-align: center;
+  margin-bottom: u.rem(80);
+
+  &__title,
+  &_about {
+    margin-bottom: u.rem(24);
+  }
+}

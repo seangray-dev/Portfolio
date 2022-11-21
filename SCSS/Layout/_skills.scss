@@ -1,0 +1,11 @@
+@use "../Utilities/" as u;
+.skills {
+  border-top: u.rem(1) solid white;
+  border-bottom: u.rem(1) solid white;
+  padding: u.rem(40) 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(24);
+  margin-bottom: u.rem(80);
+}

@@ -1,0 +1,14 @@
+@use "../utilities/" as u;
+
+.container {
+  max-width: u.rem(345);
+  margin-inline: auto;
+
+  @include u.breakpoint(medium) {
+    max-width: u.rem(708);
+  }
+
+  @include u.breakpoint(xlarge) {
+    max-width: u.rem(1110);
+  }
+}

@@ -1,0 +1,11 @@
+@use "../Utilities/" as u;
+
+footer {
+  background-color: var(--clr-800);
+
+  .nav {
+    margin-top: 0;
+    padding-top: u.rem(40);
+    padding-bottom: u.rem(60);
+  }
+}

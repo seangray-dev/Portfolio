@@ -1,0 +1,41 @@
+@use "../utilities" as u;
+
+.contact {
+  padding-top: u.rem(60);
+  text-align: center;
+  background-color: var(--clr-800);
+
+  &__title {
+    margin-bottom: u.rem(20);
+  }
+
+  &__about {
+    margin-bottom: u.rem(48);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(32);
+  padding-bottom: u.rem(87);
+  border-bottom: u.rem(1) solid var(--clr-100);
+}
+
+form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: u.rem(1) solid var(--clr-100);
+  text-transform: uppercase;
+  padding-bottom: u.rem(16);
+}
+
+form button {
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  color: var(--clr-100);
+  cursor: pointer;
+  font-weight: 700;
+}

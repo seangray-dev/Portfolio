@@ -1,0 +1,39 @@
+@use "../utilities" as u;
+
+.projects {
+  margin-bottom: u.rem(80);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: u.rem(40);
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: u.rem(40);
+}
+
+.project {
+  &__img {
+    margin-bottom: u.rem(20);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: u.rem(7);
+  }
+
+  &__build {
+    margin-bottom: u.rem(20);
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: flex-start;
+    gap: u.rem(32);
+  }
+}
