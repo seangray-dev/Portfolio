@@ -27,3 +27,12 @@
     gap: 25.6px;
   }
 }
+
+.icon path {
+  transition: fill 0.3s ease;
+}
+
+.icon:hover path,
+.icon:focus path {
+  fill: var(--clr-accent);
+}

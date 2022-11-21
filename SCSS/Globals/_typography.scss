@@ -49,10 +49,16 @@ a:active {
 }
 
 .bb-accent {
-  border-bottom: 2px solid var(--clr-accent);
+  border-bottom: u.rem(2) solid var(--clr-accent);
 }
 
 .link {
   letter-spacing: u.rem(2.29);
   padding-bottom: u.rem(10);
+  transition: color 0.3s ease;
+}
+
+.link:hover,
+.link:active {
+  color: var(--clr-accent);
 }
