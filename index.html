@@ -278,14 +278,14 @@
             </p>
           </div>
           <div>
-            <form id="form" class="form">
+            <form id="form_contact" class="form" method="post">
               <div class="form-control">
-                <input type="text" placeholder="Name" id="Name" required />
+                <input type="text" placeholder="Name" id="name" min="1" />
                 <i class="fas fa-exclamation-circle"></i>
                 <p>Sorry, invalid format here</p>
               </div>
               <div class="form-control">
-                <input type="email" placeholder="email" id="email" required />
+                <input type="email" placeholder="email" id="email" />
                 <i class="fas fa-exclamation-circle"></i>
                 <p>Sorry, invalid format here</p>
               </div>
@@ -295,7 +295,6 @@
                   type="text"
                   placeholder="Message"
                   id="form-message"
-                  required
                 />
                 <i class="fas fa-exclamation-circle"></i>
                 <p>Sorry, invalid format here</p>
@@ -385,5 +384,6 @@
         </nav>
       </div>
     </footer>
+    <script src="./JS/form.js"></script>
   </body>
 </html>
