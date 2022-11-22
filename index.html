@@ -278,35 +278,30 @@
             </p>
           </div>
           <div>
-            <form class="form_contact" id="contact" action="" method="post">
+            <form id="form" class="form">
               <div class="form-control">
-                <input placeholder="Name" type="text" tabindex="1" required />
-                <i
-                  class="fa fa-exclamation-circle error-icon"
-                  aria-hidden="true"
-                ></i>
-                <p class="error-message">Sorry, invalid format here</p>
-                <input placeholder="Email" type="email" tabindex="2" required />
-                <i
-                  class="fa fa-exclamation-circle error-icon"
-                  aria-hidden="true"
-                ></i>
-                <p class="error-message">Sorry, invalid format here</p>
+                <input type="text" placeholder="Name" id="Name" required />
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Sorry, invalid format here</p>
+              </div>
+              <div class="form-control">
+                <input type="email" placeholder="email" id="email" required />
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Sorry, invalid format here</p>
+              </div>
+              <div class="form-control">
                 <input
                   class="form-message"
+                  type="text"
                   placeholder="Message"
-                  tabindex="3"
+                  id="form-message"
                   required
                 />
-                <button
-                  class="bb-accent link"
-                  name="submit"
-                  type="submit"
-                  id="contact-submit"
-                  data-submit="...Sending"
-                >
-                  Send Message
-                </button>
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Sorry, invalid format here</p>
+              </div>
+              <div class="flex-end">
+                <button class="bb-accent link">Send Message</button>
               </div>
             </form>
           </div>

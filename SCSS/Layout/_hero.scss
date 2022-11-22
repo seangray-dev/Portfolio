@@ -8,4 +8,9 @@
   &_about {
     margin-bottom: u.rem(24);
   }
+
+  &__image img {
+    max-width: u.rem(174);
+    margin-bottom: u.rem(40);
+  }
 }

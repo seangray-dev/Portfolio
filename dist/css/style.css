@@ -34,6 +34,10 @@ ol {
   padding: 0;
 }
 
+.form button {
+  border: none;
+}
+
 h1,
 h2,
 h3,
@@ -103,6 +107,7 @@ a:active {
   --clr-800: hsl(0, 0%, 14%);
   --clr-200: hsl(0, 0%, 85%);
   --clr-100: hsl(0, 0%, 100%);
+  --clr-error: hsl(7, 100%, 68%);
 }
 
 .nav {
@@ -152,6 +157,10 @@ a:active {
 }
 .hero__title, .hero_about {
   margin-bottom: 1.5rem;
+}
+.hero__image img {
+  max-width: 10.875rem;
+  margin-bottom: 2.5rem;
 }
 
 .skills {
@@ -211,16 +220,13 @@ a:active {
   margin-bottom: 3rem;
 }
 
-.form_contact {
-  padding-bottom: 5.4375rem;
+form {
   border-bottom: 0.0625rem solid var(--clr-100);
 }
 
 .form-control {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
   position: relative;
+  padding-bottom: 2rem;
 }
 
 .form-control input {
@@ -237,6 +243,7 @@ a:active {
   outline: none;
   display: block;
   transition: border-bottom 0.3s ease;
+  width: 100%;
 }
 
 .form-control input:focus::-moz-placeholder {
@@ -269,34 +276,54 @@ a:active {
   border-bottom: 0.0625rem solid var(--clr-accent);
 }
 
-.form-message {
+input.form-message {
   padding-bottom: 5rem;
 }
 
-form button {
-  align-self: flex-end;
+.form-control.error input {
+  color: var(--clr-error);
+  border-bottom: 0.0625rem solid var(--clr-error);
+}
+
+.form-control i {
+  visibility: hidden;
+  color: var(--clr-error);
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: var(--clr-error);
+  visibility: visible;
+}
+
+.form-control p {
+  font-size: 0.75rem;
+  color: var(--clr-error);
+  position: absolute;
+  bottom: 10;
+  right: 0;
+  visibility: hidden;
+}
+
+.form-control.error p {
+  visibility: visible;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form button {
   background: transparent;
-  border: none;
+  border-bottom: 0.125rem solid var(--clr-accent);
   text-transform: uppercase;
   color: var(--clr-100);
   cursor: pointer;
   font-weight: 700;
-}
-
-.form-control i {
-  position: absolute;
-  top: 0.625rem;
-  right: 0rem;
-  color: hsl(7deg, 100%, 68%);
-}
-
-.form-control p {
-  color: hsl(7deg, 100%, 68%);
-  font-size: 0.75rem;
-  text-align: right;
-  position: absolute;
-  top: 3.125rem;
-  right: 0;
+  margin-bottom: 5.4375rem;
 }
 
 footer {

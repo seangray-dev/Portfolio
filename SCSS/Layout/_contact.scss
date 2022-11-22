@@ -14,20 +14,13 @@
   }
 }
 
-.form_contact {
-  // position: relative;
-  // display: flex;
-  // flex-direction: column;
-  // gap: u.rem(32);
-  padding-bottom: u.rem(87);
+form {
   border-bottom: u.rem(1) solid var(--clr-100);
 }
 
 .form-control {
-  display: flex;
-  flex-direction: column;
-  gap: u.rem(32);
   position: relative;
+  padding-bottom: u.rem(32);
 }
 
 .form-control input {
@@ -44,6 +37,7 @@
   outline: none;
   display: block;
   transition: border-bottom 0.3s ease;
+  width: 100%;
 }
 
 .form-control input:focus::placeholder {
@@ -58,32 +52,52 @@
   border-bottom: u.rem(1) solid var(--clr-accent);
 }
 
-.form-message {
+input.form-message {
   padding-bottom: u.rem(80);
 }
 
-form button {
-  align-self: flex-end;
+.form-control.error input {
+  color: var(--clr-error);
+  border-bottom: u.rem(1) solid var(--clr-error);
+}
+
+.form-control i {
+  visibility: hidden;
+  color: var(--clr-error);
+  position: absolute;
+  top: u.rem(10);
+  right: u.rem(10);
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: var(--clr-error);
+  visibility: visible;
+}
+
+.form-control p {
+  font-size: u.rem(12);
+  color: var(--clr-error);
+  position: absolute;
+  bottom: 10;
+  right: 0;
+  visibility: hidden;
+}
+
+.form-control.error p {
+  visibility: visible;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form button {
   background: transparent;
-  border: none;
+  border-bottom: u.rem(2) solid var(--clr-accent);
   text-transform: uppercase;
   color: var(--clr-100);
   cursor: pointer;
   font-weight: 700;
-}
-
-.form-control i {
-  position: absolute;
-  top: u.rem(10);
-  right: u.rem(0);
-  color: hsl(7, 100%, 68%);
-}
-
-.form-control p {
-  color: hsl(7, 100%, 68%);
-  font-size: u.rem(12);
-  text-align: right;
-  position: absolute;
-  top: u.rem(50);
-  right: 0;
+  margin-bottom: u.rem(87);
 }
