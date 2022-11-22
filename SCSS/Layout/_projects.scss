@@ -28,6 +28,8 @@
   }
 
   &__build {
+    display: flex;
+    gap: u.rem(18);
     margin-bottom: u.rem(20);
   }
 

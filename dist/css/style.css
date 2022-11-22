@@ -34,6 +34,10 @@ ol {
   padding: 0;
 }
 
+.form button {
+  border: none;
+}
+
 h1,
 h2,
 h3,
@@ -83,12 +87,18 @@ a:active {
 }
 
 .bb-accent {
-  border-bottom: 2px solid var(--clr-accent);
+  border-bottom: 0.125rem solid var(--clr-accent);
 }
 
 .link {
   letter-spacing: 0.143125rem;
   padding-bottom: 0.625rem;
+  transition: color 0.3s ease;
+}
+
+.link:hover,
+.link:active {
+  color: var(--clr-accent);
 }
 
 :root {
@@ -97,6 +107,7 @@ a:active {
   --clr-800: hsl(0, 0%, 14%);
   --clr-200: hsl(0, 0%, 85%);
   --clr-100: hsl(0, 0%, 100%);
+  --clr-error: hsl(7, 100%, 68%);
 }
 
 .nav {
@@ -127,6 +138,15 @@ a:active {
   gap: 25.6px;
 }
 
+.icon path {
+  transition: fill 0.3s ease;
+}
+
+.icon:hover path,
+.icon:focus path {
+  fill: var(--clr-accent);
+}
+
 :root {
   --ff-primary: "Space Grotesk", sans-serif;
 }
@@ -137,6 +157,10 @@ a:active {
 }
 .hero__title, .hero_about {
   margin-bottom: 1.5rem;
+}
+.hero__image img {
+  max-width: 10.875rem;
+  margin-bottom: 2.5rem;
 }
 
 .skills {
@@ -174,6 +198,8 @@ a:active {
   margin-bottom: 0.4375rem;
 }
 .project__build {
+  display: flex;
+  gap: 1.125rem;
   margin-bottom: 1.25rem;
 }
 .project__overlay {
@@ -195,29 +221,109 @@ a:active {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-bottom: 5.4375rem;
   border-bottom: 0.0625rem solid var(--clr-100);
 }
 
-form input {
+.form-control {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.form-control input {
   background-color: transparent;
   border: none;
   border-bottom: 0.0625rem solid var(--clr-100);
   text-transform: uppercase;
   padding-bottom: 1rem;
+  color: var(--clr-100);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: 0.01375rem;
+  outline: none;
+  display: block;
+  transition: border-bottom 0.3s ease;
+  width: 100%;
 }
 
-form button {
-  align-self: flex-end;
+.form-control input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form-control input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-control input:focus::placeholder {
+  color: transparent;
+}
+
+.form-control input::-moz-placeholder {
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.form-control input:-ms-input-placeholder {
+  -ms-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.form-control input::placeholder {
+  transition: color 0.3s ease;
+}
+
+.form-control input:valid {
+  border-bottom: 0.0625rem solid var(--clr-accent);
+}
+
+input.form-message {
+  padding-bottom: 5rem;
+}
+
+.form-control.error input {
+  color: var(--clr-error);
+  border-bottom: 0.0625rem solid var(--clr-error);
+}
+
+.form-control i {
+  visibility: hidden;
+  color: var(--clr-error);
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: var(--clr-error);
+  visibility: visible;
+}
+
+.form-control p {
+  font-size: 0.75rem;
+  color: var(--clr-error);
+  position: absolute;
+  bottom: 10;
+  right: 0;
+  visibility: hidden;
+}
+
+.form-control.error p {
+  visibility: visible;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form button {
   background: transparent;
-  border: none;
+  border-bottom: 0.125rem solid var(--clr-accent);
   text-transform: uppercase;
   color: var(--clr-100);
   cursor: pointer;
   font-weight: 700;
+  margin-bottom: 5.4375rem;
 }
 
 footer {
