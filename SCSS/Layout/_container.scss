@@ -1,7 +1,8 @@
 @use "../utilities/" as u;
 
 .container {
-  max-width: u.rem(345);
+  // max-width: u.rem(345);
+  width: 90%;
   margin-inline: auto;
 
   @include u.breakpoint(medium) {

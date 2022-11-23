@@ -8,4 +8,68 @@
   flex-direction: column;
   gap: u.rem(24);
   margin-bottom: u.rem(80);
+
+  @include u.breakpoint(medium) {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: u.rem(52) u.rem(7);
+    grid-template-areas:
+      "__html __css"
+      "__javascript __accessibility"
+      "__react __sass";
+
+    &__heading {
+      margin-bottom: u.rem(14);
+    }
+
+    &__html {
+      grid-area: __html;
+    }
+    &__css {
+      grid-area: __css;
+    }
+    &__javascript {
+      grid-area: __javascript;
+    }
+    &__accessibility {
+      grid-area: __accessibility;
+    }
+    &__react {
+      grid-area: __react;
+    }
+    &__sass {
+      grid-area: __sass;
+    }
+  }
+
+  @include u.breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: u.rem(58) u.rem(30);
+    grid-template-areas:
+      "__html __css __javascript"
+      "__accessibility __react __sass";
+
+    &__html {
+      grid-area: __html;
+    }
+    &__css {
+      grid-area: __css;
+    }
+    &__javascript {
+      grid-area: __javascript;
+    }
+    &__sass {
+      grid-area: __sass;
+    }
+    &__react {
+      grid-area: __react;
+    }
+    &__accessibility {
+      grid-area: __accessibility;
+    }
+  }
 }
